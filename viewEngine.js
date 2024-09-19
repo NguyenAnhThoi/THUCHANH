@@ -1,6 +1,5 @@
-const viewEngine=(app)=>{
-        app.set("view engine","ejs")
-        app.set("view","./")
+const viewEngine=(app) => {
+    app.set("view engine", "ejs")
+    app.set("views","./")
     }
-        export default viewEngine
-
+export default viewEngine
