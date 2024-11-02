@@ -1,4 +1,4 @@
-// controllers/AboutController.js
-exports.index = (req, res) => {
-    res.render('about'); // Render file about.ejs
+// AboutController.js
+export const renderAbout = (req, res) => {
+    res.render('about', { title: 'Giới Thiệu', content: 'Thông tin về chúng tôi', title: 'Về chúng tôi' });
 };

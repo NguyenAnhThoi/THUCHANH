@@ -1,21 +1,26 @@
-// server.js
-const express = require('express');
-const path = require('path');
-const webRoute = require('./routes/webRoute');
+import express from 'express';
+import dotenv from 'dotenv/config';
+import session from 'express-session';
+import viewEngine from './viewEngine.js';
+import webRoute from './routes/webRoute.js';
+
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT;
 
-// Cấu hình view engine
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+viewEngine(app);
 
-// Cấu hình thư mục tĩnh
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// Định nghĩa các route
-app.use('/', webRoute);
+app.use(session({
+    secret: 'your_secret_key',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}));
 
-// Khởi động server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.use(webRoute);
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });

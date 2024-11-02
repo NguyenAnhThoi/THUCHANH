@@ -1,4 +1,4 @@
 // controllers/HomeController.js
-exports.index = (req, res) => {
-    res.render('home'); // Render file home.ejs
+export const renderHome = (req, res) => {
+    res.render('home', { title: 'Trang Chủ' });
 };

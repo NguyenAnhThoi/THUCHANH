@@ -1,16 +1,15 @@
-const express = require('express');
+// routes/webRoute.js
+import express from 'express';
+import { renderHome } from '../controllers/HomeController.js';
+import { renderAbout } from '../controllers/AboutController.js';
+import { renderContact } from '../controllers/ContactController.js';
+import * as UserController from '../controllers/UserController.js';
+
 const router = express.Router();
-const HomeController = require('../controllers/HomeController');
-const AboutController = require('../controllers/AboutController');
-const ContactController = require('../controllers/ContactController');
 
-// Route cho trang chủ
-router.get('/', HomeController.index);
+router.get('/', renderHome);
+router.get('/about', renderAbout);
+router.get('/contact', renderContact);
+router.get('/user', UserController.getUser);
 
-// Route cho trang Giới thiệu
-router.get('/about', AboutController.index);
-
-// Route cho trang Liên hệ
-router.get('/contact', ContactController.index);
-
-module.exports = router;
+export default router;

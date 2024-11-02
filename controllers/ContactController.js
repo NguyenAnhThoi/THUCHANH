@@ -1,4 +1,4 @@
-// controllers/ContactController.js
-exports.index = (req, res) => {
-    res.render('contact'); // Render file contact.ejs
+// ContactController.js
+export const renderContact = (req, res) => {
+    res.render('contact', { title: 'Liên Hệ', content: 'Thông tin liên hệ', title:'Liên hệ' });
 };
