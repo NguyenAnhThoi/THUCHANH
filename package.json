@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "ltwnc",
+=======
+  "name": "demo",
+>>>>>>> c77dde6cf59b2a482e14f1942d5e67dec7da4de7
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -16,13 +20,22 @@
     "@babel/preset-env": "^7.25.4"
   },
   "dependencies": {
+<<<<<<< HEAD
     "bcrypt": "^5.1.1",
+=======
+>>>>>>> c77dde6cf59b2a482e14f1942d5e67dec7da4de7
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.21.0",
     "express-session": "^1.18.1",
+<<<<<<< HEAD
     "mongoose": "^8.7.1",
     "mysql2": "^3.11.3",
     "nodemon": "^3.1.5"
+=======
+    "mysql2": "^3.11.3",
+    "nodemon": "^3.1.5",
+    "start": "^5.1.0"
+>>>>>>> c77dde6cf59b2a482e14f1942d5e67dec7da4de7
   }
 }

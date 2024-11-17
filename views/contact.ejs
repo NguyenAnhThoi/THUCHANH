@@ -1,0 +1,24 @@
+<!-- views/contact.ejs -->
+<%- include('header') %>
+<main class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4">Liên hệ với chúng tôi</h1>
+        <p class="lead">Chúng tôi luôn sẵn sàng hỗ trợ bạn!</p>
+        <form class="mt-4" style="max-width: 600px; margin: auto;">
+            <div class="mb-3">
+                <label for="name" class="form-label">Tên của bạn</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email của bạn</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Tin nhắn</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Gửi</button>
+        </form>
+    </div>
+</main>
+<%- include('footer') %>

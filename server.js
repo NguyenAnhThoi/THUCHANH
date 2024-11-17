@@ -21,6 +21,7 @@ app.use(session({
 
 app.use(webRoute);
 
+<<<<<<< HEAD
 app.use((req, res) => {
     return res.send ('404 NOT FOUND');
 })
@@ -31,3 +32,8 @@ app.listen(port, () => {
 
 
 
+=======
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
+>>>>>>> c77dde6cf59b2a482e14f1942d5e67dec7da4de7
